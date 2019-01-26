@@ -14,7 +14,7 @@ On your user page, you can upload and download files. I created a user and uploa
 
 ### What's Missing
 I ran out of time before being able to complete the following. I don't think they were that difficult, but they are things I have not done before and would have required more time-consuming debugging to get them working properly.
-* There are no API endpoints to upload and download independent of the app. I have experience developing APIs including SOAP, REST, and GraphQL, but not with uploading files.
+* There are no API endpoints to upload and download independent of the UI. I have experience developing APIs with SOAP, REST, and GraphQL using both XML and JSON, but I have not previously implemented file upload via an API.
 * I did not use ActiveJob to make the downloads asynchronous. I have not used ActiveJob before, but I have used Sidekiq for asynchronous processing. I think I could have gotten this working with more time.
 * I do not exclude any file types, but I only tested with PDFs.
 * Because of time constraints, I did not add unit tests, which distresses me greatly.
