@@ -1,1 +1,20 @@
+<div class="controls text-left">
+  <%= form_tag(upload_file_user_path, multipart: true) do |form| %>
+    <%= file_field_tag "file"%><br/>
+    <%= submit_tag "Upload File", :class => "btn btn-primary" %>
+  <% end %>
+</div>
 <h2>Uploaded Files</h2>
+<% if @files && @files.count > 0 %>
+  <table class='table table-striped'>
+    <% for file in @files %>
+      <tr>
+        <td><%= link_to file.filename, download_file_user_path(file_id: file.id), target: '_blank' %></td>
+        <td>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+<% else %>
+  No Files Found
+<% end %>
