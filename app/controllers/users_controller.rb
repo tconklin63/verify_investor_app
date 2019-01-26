@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   end
 
   def upload_file
+    # Files data is saved directly in the database via the binary data field
     if params[:file]
       UploadedFile.create(user_id: current_user.id,
                           filename: params[:file].original_filename,
