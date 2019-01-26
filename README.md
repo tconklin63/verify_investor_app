@@ -1,3 +1,4 @@
+### Basic Information
 This app deployed and running at http://verify-investor-upload.herokuapp.com. When first visiting the site you will need to create a user, after which you will be immediately signed in. The default Devise settings do not require you to sign in via an email link.
 
 On your user page, you can upload and download files. I created a user and uploaded some files already. You can see them by logging in with user@exmaple.com/password1
