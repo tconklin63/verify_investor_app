@@ -10,6 +10,8 @@ http://verify-investor-upload.herokuapp.com/api/user/:id/upload_file
 ```
 Replace `:id` with the ID of your user, which can be found in the URL path when you are logged in. Under the `body` tab, select `form-data`, create a parameter named `file` of type `file`, and select a file to upload. Click `send` to upload the file. You should then be able to see your file in the UI.
 
+The directory `postman_collections` contains a `json` file exported from Postman to test uploads.
+
 ### Implementation Details
 * User sign up and authentication is done via the devise gem.
 * To get around Heroku's temporary file storage, file data is stored in the database in the uploaded_files table. This table contains a filename field and a binary field to store the actual data. (This is something I had previous solved for my personal projects running on Heroku)
