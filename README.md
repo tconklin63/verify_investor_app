@@ -8,7 +8,7 @@ To upload the file via the API, send a POST request in Postman to following endp
 ```
 http://verify-investor-upload.herokuapp.com/api/user/:id/upload_file
 ```
-Replace :id with the ID of your user, which can be found in the URL path when you are logged in. Under the `body` tab, select `form-data`, create a parameter named `file` of type `file`, and select a file to upload. Click `send` to upload the file.
+Replace `:id` with the ID of your user, which can be found in the URL path when you are logged in. Under the `body` tab, select `form-data`, create a parameter named `file` of type `file`, and select a file to upload. Click `send` to upload the file.
 
 ### Implementation Details
 * User sign up and authentication is done via the devise gem.
