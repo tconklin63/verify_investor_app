@@ -4,11 +4,11 @@ This app deployed and running at http://verify-investor-upload.herokuapp.com. Wh
 On your user page, you can upload and download files. I created a user and uploaded some files already. You can see them by logging in with user@exmaple.com/password1
 
 #### API uploads
-To upload the file via API, send a POST request in Postman to following endpoint.
+To upload the file via the API, send a POST request in Postman to following endpoint.
 ```
 http://verify-investor-upload.herokuapp.com/api/user/:id/upload_file
 ```
-Under the body tag, create a parameter name 'file' of type 'file' and select a file to upload.
+Under the body tab, create a parameter named `file` of type `file` and select a file to upload. Click `send` to upload the file.
 
 ### Implementation Details
 * User sign up and authentication is done via the devise gem.
