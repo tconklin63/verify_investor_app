@@ -1,10 +1,12 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!, except: :upload_file
+
   def show
     @files = UploadedFile.where(user_id: current_user.id).order(filename: :asc)
   end
 
   def upload_file
-    # Files data is saved directly in the database via the binary data field
+    # File data is saved directly in the database via the binary data field
     if params[:file]
       UploadedFile.create(user_id: current_user.id,
                           filename: params[:file].original_filename,
