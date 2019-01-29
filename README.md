@@ -12,7 +12,7 @@ Replace `:id` with the ID of your user, which can be found in the URL path when 
 
 ### Implementation Details
 * User sign up and authentication is done via the devise gem.
-* To get around Heroku's temporary file storage, file data is stored in the database in the uploaded_files table. This table contains a filename field and a binary field to store the actual data. (This is something I had previous solved for my persional projects running on Heroku)
+* To get around Heroku's temporary file storage, file data is stored in the database in the uploaded_files table. This table contains a filename field and a binary field to store the actual data. (This is something I had previous solved for my personal projects running on Heroku)
 * Each user will only see their own files.
 * I used Twitter Bootstrap to quickly get a basic UI up and running.
 * PDFs appear in a new browser tab when clicking on the filename, which then allows downloading.

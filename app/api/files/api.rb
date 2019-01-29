@@ -11,11 +11,17 @@ module Files
       end
       route_param :user_id do
         get :list_files do
-          UploadedFile.where(user_id: params[:user_id]).order(filename: :asc)
-                      .pluck(:filename)
+          files = UploadedFile.where(user_id: params[:user_id])
+                              .order(filename: :asc).pluck(:id, :filename)
+          result = []
+          files.each do |file|
+            result = { id: file[0], filename: file[1] }
+          end
+          result.as_json
         end
       end
 
+      desc 'Upload a file'
       params do
         requires :user_id, type: Integer, desc: 'User ID'
         requires :file, type: File, desc: 'File to upload'
