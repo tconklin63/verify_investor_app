@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!, except: :upload_file
+  before_action :authenticate_user!
 
   def show
     @files = UploadedFile.where(user_id: current_user.id).order(filename: :asc)
