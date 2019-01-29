@@ -1,0 +1,49 @@
+{
+	"info": {
+		"_postman_id": "1565973a-9d69-4004-acc2-fb576b83aa9a",
+		"name": "Verify Investor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Upload File",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "http://verify-investor-upload.herokuapp.com/api/user/1/upload_file",
+					"protocol": "http",
+					"host": [
+						"verify-investor-upload",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"user",
+						"1",
+						"upload_file"
+					],
+					"query": [
+						{
+							"key": "file",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
